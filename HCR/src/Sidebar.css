@@ -1,0 +1,56 @@
+/* Sidebar.css */
+
+.sidebar1 {
+  width: 260px;              /* Largura fixa da sidebar */
+  height: 100vh;             /* 100% da altura da viewport */
+  position: fixed;           /* Fixa a sidebar na tela */
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4; /* Cor de fundo da sidebar f4f4f4 */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destaque */
+  box-sizing: border-box;    /* Para incluir padding dentro do tamanho total */
+}
+
+.sidebar1 img {
+  width: 100%;               /* Logotipo ocupa 100% da largura disponível */
+  margin-bottom: 20px;
+}
+
+.menu-item1 {
+  margin-bottom: 10px;
+}
+
+.menu-button1 {
+  width: 100%;               /* Botão ocupa toda a largura */
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.menu-button1:hover {
+  background-color: #ccc;     /* Cor de fundo ao passar o mouse */
+}
+
+.sub-menu1 {
+  padding-left: 10px;         /* Espaçamento interno para diferenciar submenus */
+}
+
+.sub-menu1-item {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sub-menu1-item:hover {
+  background-color: #e0e0e0;  /* Cor ao passar o mouse no submenu */
+}

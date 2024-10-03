@@ -19,12 +19,12 @@ export default function Sidebar({ setMessage }) {
       {/* Internados Menu */}
       <div className="menu-item1">
         <button className="menu-button1" onClick={() => setShowInternados(!showInternados)}>
-          🏥 Internados {showInternados ? '▲' : '▼'}
+          🏥 Cadastros {showInternados ? '▲' : '▼'}
         </button>
         {showInternados && (
           <div className="sub-menu1">
-            <button className="sub-menu-item1" onClick={() => setMessage('Internados-convenios')}>
-              Internados por convênio
+            <button className="sub-menu-item1" onClick={() => setMessage('Cadastros-por-raça')}>
+              Cadastro por raça.
             </button>
             <button className="sub-menu-item1" onClick={() => setMessage('Internados-setor')}>
               Internados por Setor
@@ -72,6 +72,7 @@ export default function Sidebar({ setMessage }) {
           </div>
         )}
       </div>
+      
     </div>
   );
 }

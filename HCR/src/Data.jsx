@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
-import './App.css'; // Certifique-se de que o CSS do App não cause conflitos com os gráficos
+import './App.css'; 
 
 function Data() {
   const [selectedMenu, setSelectedMenu] = useState('');
 
   // Mapeamento dos links e gráficos
   const graficoLinks = {
-    'Internados-convenios': {
+    'Cadastros-por-raça': {
       resource: "/adhoc/Marau/Cadastros/Cadastros___Ativos_por_Raça_Cor",
       auth: {
         name: "alexandre_conteratto",
@@ -63,7 +63,7 @@ function Data() {
         password: "AC@bi2023"
       },
     },
-    // ... outros gráficos
+
   };
 
   const loadGrafico = (menuOption) => {
@@ -91,7 +91,7 @@ function Data() {
 
   return (
     <div style={{ display: 'flex' }}>
-      {/* Sidebar */}
+
       <Sidebar setMessage={setSelectedMenu} />
 
       {/* Área principal */}

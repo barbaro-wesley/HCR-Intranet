@@ -1,56 +1,111 @@
-/* Sidebar.css */
-
+/* Sidebar Expansível */
 .sidebar1 {
-  width: 260px;              /* Largura fixa da sidebar */
-  height: 100vh;             /* 100% da altura da viewport */
-  position: fixed;           /* Fixa a sidebar na tela */
+  width: 260px;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: #f4f4f4; /* Cor de fundo da sidebar f4f4f4 */
+  background-color: #f4f4f4;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destaque */
-  box-sizing: border-box;    /* Para incluir padding dentro do tamanho total */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+  overflow-y: auto; /* Permite rolagem se necessário */
 }
 
-.sidebar1 img {
-  width: 100%;               /* Logotipo ocupa 100% da largura disponível */
+/* Quando a sidebar está contraída */
+.sidebar1.collapsed {
+  width: 60px; /* Largura quando contraída */
+}
+
+/* Estilo da logo */
+.logo {
+  width: 100%;
   margin-bottom: 20px;
+  object-fit: contain;
 }
 
+/* Estilo do botão de menu */
 .menu-item1 {
   margin-bottom: 10px;
 }
 
+/* Estilo dos botões principais do menu */
 .menu-button1 {
-  width: 100%;               /* Botão ocupa toda a largura */
+  width: 100%;
   padding: 10px;
   text-align: left;
   border: none;
-  background-color: #ddd;
+  background-color: #f9f9f9;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
+  font-weight: 300;
+  color: #333;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .menu-button1:hover {
-  background-color: #ccc;     /* Cor de fundo ao passar o mouse */
+  background-color: #e6e6e6;
+  color: #000;
 }
 
+/* Estilo dos submenus */
 .sub-menu1 {
-  padding-left: 10px;         /* Espaçamento interno para diferenciar submenus */
+  padding-left: 20px;
+  margin-top: 5px;
 }
 
-.sub-menu1-item {
+.sub-menu-item1 {
   display: block;
   width: 100%;
   padding: 8px;
   text-align: left;
-  background-color: #f0f0f0;
+  background-color: #f4f4f4;
   border: none;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  color: #555;
+  letter-spacing: 0.4px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sub-menu-item1:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Estilo do botão de contração/expansão */
+.toggle-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: background-color 0.3s;
 }
 
-.sub-menu1-item:hover {
-  background-color: #e0e0e0;  /* Cor ao passar o mouse no submenu */
+.toggle-button:hover {
+  background-color: #ccc;
+}
+
+/* Centralizar o ícone quando a sidebar está contraída */
+.sidebar1.collapsed .toggle-button {
+  width: 100%;
+  text-align: center;
+}
+
+/* Quando a sidebar está contraída, esconder logo e conteúdo do menu */
+.sidebar1.collapsed img,
+.sidebar1.collapsed .menu-item1 {
+  display: none;
 }
